@@ -11,7 +11,7 @@ RUN apt-get update \
     vim \
     wget \
  && mkdir -p /opt/geyser \
- && wget --quiet --directory-prefix /opt/geyser --output-document Geyser-Standalone.jar "https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/standalone" \
+ && wget --quiet --directory-prefix "/opt/geyser" --output-document "Geyser-Standalone.jar" "https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/standalone" \
  && apt-get autoremove --yes --purge \
  && apt-get clean \
  && rm --recursive --force /var/lib/apt/lists/* /tmp/* /var/tmp/*
